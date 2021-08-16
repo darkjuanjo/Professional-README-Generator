@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/darkjuanjo/Professional-README-Generator/issues"
   },
-  "homepage": "https://github.com/darkjuanjo/Professional-README-Generator#readme"
+  "homepage": "https://github.com/darkjuanjo/Professional-README-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  }
 }
