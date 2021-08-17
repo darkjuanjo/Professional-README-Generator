@@ -1,4 +1,5 @@
 const generateREADME = require('./src/template.js');
+const writeFile = require('./util/generate-readme.js');
 const inquirer = require('inquirer');
 
 const promptProjectInfo = () => {
@@ -224,7 +225,7 @@ promptProjectInfo()
 .then(promptUsage)
 .then(giveCreditresponse)
 .then(promptLicense)
-.then(projectInfoData => {
-    console.log(projectInfoData);
-    console.log(generateREADME(projectInfoData))
+.then(generateREADME)
+.then(readme => {
+    return writeFile(readme);
 });
