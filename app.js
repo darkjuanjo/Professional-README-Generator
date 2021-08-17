@@ -1,3 +1,4 @@
+const generateREADME = require('./src/template.js');
 const inquirer = require('inquirer');
 
 const promptProjectInfo = () => {
@@ -158,7 +159,7 @@ const promptCredits = projectInfoData => {
     {
         type: 'input',
         name: 'github',
-        message: 'Please provide github profile of collaborator (Required)',
+        message: 'Please provide the github username (Required)',
         validate: githubInput => {
             if(githubInput) {
                 return true;
@@ -213,7 +214,7 @@ const promptLicense = projectInfoData => {
       default: 'MIT'
   }])
   .then(licenseInfo => {
-      projectInfoData.license = licenseInfo
+      projectInfoData.license = licenseInfo.license
       return projectInfoData;
     });
 };
@@ -223,4 +224,7 @@ promptProjectInfo()
 .then(promptUsage)
 .then(giveCreditresponse)
 .then(promptLicense)
-.then(data => console.log(data));
+.then(projectInfoData => {
+    console.log(projectInfoData);
+    console.log(generateREADME(projectInfoData))
+});
