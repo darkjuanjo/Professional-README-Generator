@@ -50,7 +50,7 @@ const displayUsage = steps => {
             });
          return collaborators_array.join('\n');
         }
-        return 'success!';
+        return '';
     }
         
 
