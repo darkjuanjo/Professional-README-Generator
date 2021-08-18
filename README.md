@@ -14,7 +14,7 @@ This app is designed to take user inputs and easily create a professional lookin
 
 ## Installation
 
-1. Download or clone Repo from Github
+1. Download or clone Repo from Github.
 2. Open the terminal and change directories until you are in the root folder of the app.js
 3. While in the root folder run `npm install` to install the dependencies (inquirer) that the app.js uses.
 
@@ -26,13 +26,13 @@ This app is designed to take user inputs and easily create a professional lookin
 4. The app will ask a series of questions (title,description,collaborates..etc)
 5. Please fill out all the questions.
 6. Once you finish responding all the questions the app will generate a README file and output it in the dist folder.
-7. Please see the following GIF for a DEMO of the app.![Local GIF DEMO](./assets/video/Demo.gif)
+7. Please see the following GIF for a DEMO of the app.![Local Demo](./assets/video/Demo.gif)
 
 8. Please click the following link to see a video DEMO of the app.
 
-Web Video Demo!
+Web Image Demo!
 
-https://drive.google.com/file/d/1KAG8dF613XTsr_ISLrrzZLQl5PCK3kur/view
+https://drive.google.com/file/d/1vlw5b1WD4GYplmM5AlNPZszYiWGZ-WrH/view
 
 
 
