@@ -27,7 +27,7 @@ This is app is designed to take user inputs and easily create a professional loo
 5. Please fill out all the questions.
 6. Once you are finished answering all the questions the app will generate a README file based on your responses and output it to the dist folder.
 7. Navigate to the dist folder to see your README file.
-8. See Below for Demo!![See Below for Demo!](https://drive.google.com/file/d/1KAG8dF613XTsr_ISLrrzZLQl5PCK3kur/view)
+8. See Below for Demo!![See Below for Demo!](./assets/video/Demo.mp4)
 )
 
 
