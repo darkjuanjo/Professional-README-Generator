@@ -102,8 +102,42 @@ const promptUsage = projectInfoData => {
         default: false
     },
     {
+        type: 'confirm',
+        name: 'confirm_local_image',
+        message: 'Is the image/video local?',
+        default: true,
+        when: ({confirm_step_image}) => {
+            if(confirm_step_image) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    },
+    {
         type: 'input',
-        name: 'step_image',
+        name: 'image_name',
+        message: 'Please provide a name for the image/video)',
+        validate: stepInput => {
+            if(stepInput) {
+                return true;
+            } else {
+                console.log("Please provide a name for the image!");
+                return false;
+            }
+        },
+        when: ({confirm_step_image}) => {
+            if(confirm_step_image) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    },
+    
+    {
+        type: 'input',
+        name: 'local_image',
         message: 'Please enter the image/video path (Required)',
         validate: step_imageInput => {
             if(step_imageInput) {
@@ -113,8 +147,28 @@ const promptUsage = projectInfoData => {
                 return false;
             }
         },
-        when: ({confirm_step_image}) => {
-            if(confirm_step_image) {
+        when: ({confirm_local_image, confirm_step_image}) => {
+            if(confirm_local_image && confirm_step_image) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'web_image',
+        message: 'Please enter https link for image/video (Required)',
+        validate: step_imageInput => {
+            if(step_imageInput) {
+                return true;
+            } else {
+                console.log('Please provide image/video path!');
+                return false;
+            }
+        },
+        when: ({confirm_local_image, confirm_step_image}) => {
+            if(!confirm_local_image && confirm_step_image) {
                 return true;
             } else {
                 return false;

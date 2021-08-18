@@ -28,7 +28,13 @@ const displayUsage = steps => {
      const steps_array = steps.map(element => {
         let step = `${counter}. ${element.instruction}`;
         if(element.confirm_step_image){
-            step += `![${element.instruction}](${element.step_image})`
+            if(element.local_image)
+            {
+                step += `![${element.image_name}](${element.local_image})\n`
+            } else {
+                step +=  `\n\n${element.image_name}!\n\n${element.web_image}\n`
+            }
+            
         }
         counter++;
         return step;
